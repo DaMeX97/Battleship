@@ -1,0 +1,27 @@
+{
+  "name": "it.unive.battleship",
+  "version": "1.2.0",
+  "description": "Web technologies and applications project",
+  "main": "server.js",
+  "scripts": {
+    "install": "npm run install-server && npm run install-web && npm run install-desktop && npm run install-android",
+    "install-server": "cd server && npm install && cd ..",
+    "install-web": "cd client/angular && npm install && cd ..",
+    "install-desktop": "cd client/desktop && npm install && cd ..",
+    "install-android": "cd client/desktop && npm install && cd ..",
+    "build-desktop": "cd client/desktop && npm run build && cd ..",
+    "build-android": "cd client/mobile && npm run build && cd ..",
+    "start-db": "cd server && npm run start-db",
+    "start-server": "cd server && npm start && cd ..",
+    "start-web": "cd client/angular && ng serve --host 0.0.0.0 --open",
+    "start-desktop": "cd client/desktop && npm run start",
+    "generate-android": "mkdir -p ./releases/ && mkdir -p ./releases/android && cd client/mobile && npm run generate && cd ..",
+    "generate-desktop": "mkdir -p ./releases/ && mkdir -p ./releases/desktop && cd client/desktop && npm run generate && cd .."
+  },
+  "author": "Dametto Alex, Volpe Davide, Zanatta Filippo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/westfox-5/BattleShip"
+  }
+}
